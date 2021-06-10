@@ -1,0 +1,23 @@
+# MVC CONFIGURATION - GENERAL:
+
+server:
+  port: 8082
+  servlet:
+    context-path: /
+
+# NO DATABASE CONFIGURATION NECESSARY. ADMINS ARE MANAGED THROUGH NHS REST API.
+
+# NHS REST API - LOCAL CONNECTION:
+
+nhs:
+  rest:
+    server-url: "http://localhost:8081"
+    roles-uri: "/roles"
+    admins-uri: "/admins"
+    client-apps-uri: "/client-apps"
+    institutions-uri: "/medical-institutions"
+    doctors-uri: "/doctors"
+    nurses-uri: "/nurses"
+    patients-uri: "/patients"
+    # ADMIN UI APP CREDENTIALS WITHIN NHS REST API:
+    credentials: "NHS-ADMIN-UI:P@ssW0rd!"

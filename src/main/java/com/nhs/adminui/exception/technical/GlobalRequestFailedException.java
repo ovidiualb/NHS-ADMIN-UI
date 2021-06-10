@@ -1,0 +1,15 @@
+package com.nhs.adminui.exception.technical;
+
+public class GlobalRequestFailedException extends RuntimeException {
+
+    private final String restEntity;
+
+    public GlobalRequestFailedException(String restEntity) {
+        super("REQUEST FAILED. PLEASE CONTACT SUPPORT");
+        this.restEntity = restEntity;
+    }
+
+    public String getRestEntity() {
+        return restEntity;
+    }
+}
