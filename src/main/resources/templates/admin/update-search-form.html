@@ -15,29 +15,29 @@
 </head>
 
 <body class="text-center">
-    <div class="form-nhs">
-        <img class="mb-4" src="../../assets/brand/n.png" alt="" width="156" height="156">
-        <h1 class="h3 mb-3 font-weight-normal">Search Admin form</h1>
+<div class="form-nhs">
+    <img class="mb-4" src="../../assets/brand/n.png" alt="" width="156" height="156">
+    <h1 class="h3 mb-3 font-weight-normal">Search Admin form</h1>
 
-        <span th:if="${errorMessage != null}" th:text="*{errorMessage}"></span>
+    <span th:if="${errorMessage != null}" th:text="*{errorMessage}"></span>
 
-        <form class="form-nhs" method="GET" th:action="@{/admins/update-form}" th:object="${adminEmailForm}">
+    <form class="form-nhs" method="GET" th:action="@{/admins/update-form}" th:object="${adminEmailForm}">
 
-            <div class="form-label-group">
-                <input id="email" name="email" th:field="*{email}" type="text" class="form-control" placeholder="Email">
-                <label for="email">Email</label>
-                <span th:errors="*{email}" th:if="${#fields.hasErrors('email')}"></span>
-            </div>
+        <div class="form-label-group">
+            <input id="email" name="email" th:field="*{email}" type="text" class="form-control" placeholder="Email">
+            <label for="email">Email</label>
+            <span th:errors="*{email}" th:if="${#fields.hasErrors('email')}"></span>
+        </div>
 
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Search Admin</button>
-        </form>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Search Admin</button>
+    </form>
 
-        <br><br>
-        <a href="/home-initial" class="btn btn-lg btn-secondary btn-block">Go back</a>
-        <br><br>
+    <br><br>
+    <a href="/home-initial" class="btn btn-lg btn-secondary btn-block">Go back</a>
+    <br><br>
 
-        <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
-    </div>
+    <p class="mt-5 mb-3 text-muted">&copy; 2020</p>
+</div>
 </body>
 
 </html>
